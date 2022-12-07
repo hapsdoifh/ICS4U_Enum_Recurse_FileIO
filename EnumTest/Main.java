@@ -6,8 +6,12 @@ public class Main{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         String temp = "",response = "";
+		System.out.println("Here are the weather options:");
+		for(Weather i : Weather.values()){
+			System.out.print(i.name() + " ");
+		}
         while(!temp.equals("exit")){
-            System.out.print("What is the state of the weather today?(or \"exit\"):");
+            System.out.print("\nWhat is the state of the weather today?(or \"exit\"):");
             temp = sc.nextLine();
             if(temp.equals("exit")){
                 break;
